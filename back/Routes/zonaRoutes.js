@@ -1,8 +1,9 @@
-import express from "express";
-import { zonaController } from "../Controllers/zonaController.js";
+import { Router } from "express";
+import { getZonas, getZona } from "../Controllers/zonaController.js";
 
-const router = express.Router()
+const router = Router();
 
-    router.get('/zon', zonaController.getAllUsers)
+    router.get('/zonas', getZonas)
+    router.get("/zonas/:idZona", getZona)
 
 export default router

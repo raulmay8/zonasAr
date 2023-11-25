@@ -1,18 +1,14 @@
-import express from "express"
-import conectarBaseDeDatos from "./config/db.js"
-import zonaRoutes from "./Routes/zonaRoutes.js"
+import app from "./app.js";
+import { sequelize } from "./config/db.js";
+import './Model/Zona.js'
 
-const app = express()
-app.use(express.json());
-
-conectarBaseDeDatos()
-
-app.use('/zonas', zonaRoutes);
-
-const PORT = process.env.PORT || 4000 
-
-const servidor = app.listen(PORT, () =>{
-    console.log(`Servidor corriendo en el puerto ${PORT}`)
-})
-
-
+async function main(){
+    try {
+        await sequelize.sync({force:false})
+        app.listen(4000)
+        console.log('Usando el puerto ', 4000)
+    } catch (error) {
+        console.error('No se pudo conectar', error)
+    }
+}
+main();

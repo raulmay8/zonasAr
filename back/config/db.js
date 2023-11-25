@@ -1,20 +1,11 @@
-import mysql from 'mysql';
+import Sequelize from 'sequelize'
 
-const conectarBaseDeDatos = async () => {
-  const conexion = mysql.createConnection({
+export const sequelize = new Sequelize(
+    'zonas',
+    'root',
+    '',
+    {
     host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'zonas'
-  });
-
-  conexion.connect((error) => {
-    if (error) {
-      console.error('Error al conectar a la base de datos:', error);
-      return;
-    }
-    console.log('Conexión exitosa');
-  });
+    dialect: 'mysql',
 }
-
-export default conectarBaseDeDatos
+); 
