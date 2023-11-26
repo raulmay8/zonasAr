@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 import {sequelize} from '../config/db.js'
 
-export const Zona = sequelize.define('zona',{
+export const Zona = sequelize.define('zonas',{
     idZona:{
         type:DataTypes.INTEGER,
         primaryKey:true,
@@ -16,7 +16,7 @@ export const Zona = sequelize.define('zona',{
     coordinate:{
         type:DataTypes.STRING
     },
-    state:{
+    idEstado:{
         type:DataTypes.STRING
     },
     status:{
@@ -24,5 +24,6 @@ export const Zona = sequelize.define('zona',{
     },
     image:{
         type:DataTypes.STRING
-    }
+    }},{
+        timestamps: false,
 })

@@ -1,16 +1,30 @@
 import { DataTypes } from "sequelize";
 import {sequelize} from '../config/db.js'
+import { Zona } from "./Zona.js";
 
-export const Zona = sequelize.define('zona',{
+export const Estados = sequelize.define('estados',{
+    
     idEstado:{
         type:DataTypes.INTEGER,
         primaryKey:true,
         autoIncrement:true
     },
-    nameEstado:{
+    name:{
         type:DataTypes.STRING
     },
-    imgEstado:{
-        type:DataTypes.STRING
-    }
+    image:{
+        type:DataTypes.STRING,
+    }},{
+    timestamps: false,
+    
+});
+Estados.hasMany(Zona, {
+    foreignKey: 'idEstadoF',
+    sourceKey: 'idEstado',
+    allowNull: true
+})
+Zona.belongsTo(Estados,{
+    foreignKey: 'idEstadoF',
+    targetId: 'idEstado',
+    allowNull: true
 })

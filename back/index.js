@@ -4,7 +4,7 @@ import './Model/Zona.js'
 
 async function main(){
     try {
-        await sequelize.sync({force:false})
+        await sequelize.sync()
         app.listen(4000)
         console.log('Usando el puerto ', 4000)
     } catch (error) {
