@@ -5,6 +5,7 @@ const Nosotros = () => {
   return (
     <div>
         <Header/>
+        Nosotros
     </div>
   )
 }
