@@ -1,14 +1,14 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-
-import Header from "./components/Header"
-import Slider from './components/Slider'
+import Inicio from './Pages/Inicio'
+import Estado from './Pages/Estado'
 function App() {
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Header/>}/>
-        <Route path='slider' element={<Slider/>}/>
+        <Route path='/' element={<Inicio/>}/>
+        <Route path='/estado' element={<Estado/>}/>
+        <Route path='/nosotros' element={<Estado/>}/>
       </Routes>
     </BrowserRouter>
   )
