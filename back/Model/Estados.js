@@ -18,7 +18,15 @@ export const Estados = sequelize.define('estados',{
     timestamps: false,
     
 });
-Estados.hasMany(Zona, {
+/* Estados.hasMany(Zona, {
+    foreignKey: 'idZonaF',
+    sourceKey: 'idZona'
+})
+Zona.belongsTo(Estados,{
+    foreignKey: 'idZonaF',
+    targetId: 'idZona'
+}) */
+/* Estados.hasMany(Zona, {
     foreignKey: 'idEstadoF',
     sourceKey: 'idEstado',
     allowNull: true
@@ -27,4 +35,4 @@ Zona.belongsTo(Estados,{
     foreignKey: 'idEstadoF',
     targetId: 'idEstado',
     allowNull: true
-})
+}) */

@@ -1,5 +1,6 @@
 import { DataTypes } from "sequelize";
 import {sequelize} from '../config/db.js'
+import { Estados } from "./Estados.js";
 
 export const Zona = sequelize.define('zonas',{
     idZona:{
@@ -11,12 +12,9 @@ export const Zona = sequelize.define('zonas',{
         type:DataTypes.STRING
     },
     description:{
-        type:DataTypes.TEXT
-    },
-    coordinate:{
         type:DataTypes.STRING
     },
-    idEstado:{
+    coordinate:{
         type:DataTypes.STRING
     },
     status:{
@@ -26,4 +24,12 @@ export const Zona = sequelize.define('zonas',{
         type:DataTypes.STRING
     }},{
         timestamps: false,
+})
+Zona.hasMany(Estados, {
+    foreignKey: 'idEstado',
+    sourceKey: 'idZona'
+})
+Estados.belongsTo(Zona,{
+    foreignKey: 'idEstado',
+    targetId: 'idZona'
 })

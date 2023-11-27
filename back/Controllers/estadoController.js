@@ -1,8 +1,10 @@
 import {Estados} from '../Model/Estados.js'
+import {Zona} from '../Model/Zona.js'
 
 export const getEstados = async (req, res) => {
     try {
         const estados = await Estados.findAll()
+        /* const estados = await Estados.findAll({include: Zona}) */
         res.json(estados)   
     } catch (error) {
         return res.status(500).json({message: error.message})
@@ -23,3 +25,15 @@ export const getEstado = async (req, res) =>{
       return res.status(500).json({message: error.message});
   }
 }
+/* export const getEstadoZona= async(req, res) =>{
+    try {
+        const {id} =req.params
+        const zona = await Zona.findAll({
+            where: {idEstado: id},
+        });
+        res.json(zona)
+    } catch (error) {
+        return res.status(500).json({message: error.message})
+    }
+}
+ */

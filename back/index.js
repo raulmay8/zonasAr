@@ -1,6 +1,5 @@
 import app from "./app.js";
 import { sequelize } from "./config/db.js";
-import './Model/Zona.js'
 
 async function main(){
     try {
