@@ -25,3 +25,14 @@ export const getZona = async (req, res) =>{
       return res.status(500).json({message: error.message});
   }
 }
+export const getZonaEstado= async(req, res) =>{
+    try {
+        const {idZona} =req.params
+        const estado = await Estados.findAll({
+            where: {idEstado: idZona},
+        });
+        res.json(estado)
+    } catch (error) {
+        return res.status(500).json({message: error.message})
+    }
+}

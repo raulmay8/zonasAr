@@ -13,10 +13,8 @@ export const getEstados = async (req, res) => {
 export const getEstado = async (req, res) =>{
   try {
       const {idEstado} = req.params;
-      const estado = await Estados.findOne({
-          where: {
-              idEstado,
-          },
+      const estado = await Zona.findAll({
+            where: {idEstadoF: idEstado},
       });
       if (!estado)
           return res.status(404).json({message: "La Estado no existe"})
@@ -25,15 +23,3 @@ export const getEstado = async (req, res) =>{
       return res.status(500).json({message: error.message});
   }
 }
-/* export const getEstadoZona= async(req, res) =>{
-    try {
-        const {id} =req.params
-        const zona = await Zona.findAll({
-            where: {idEstado: id},
-        });
-        res.json(zona)
-    } catch (error) {
-        return res.status(500).json({message: error.message})
-    }
-}
- */
