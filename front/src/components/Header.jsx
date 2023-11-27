@@ -1,4 +1,5 @@
-import {useState} from 'react'
+import { useState } from 'react';
+import Logo from '../img/logo.png'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,9 +12,9 @@ const Header = () => {
           <div className="flex space-x-7">
             <div>
               {/* Website Logo */}
-              <a href="#" className="flex items-center py-4 px-0"> {/* Ajusta el padding si es necesario */}
+              <a href="/" className="flex items-center py-4 px-0"> {/* Ajusta el padding si es necesario */}
                 {/* Asegúrate de que la ruta al logo sea correcta */}
-                <img src="src/img/logo.png" alt="Logo" className="h-20 w-20" /> {/* Eliminé mr-12 para pegarlo a la izquierda */}
+                <img src={Logo} alt="Logo" className="h-20 w-20" /> {/* Eliminé mr-12 para pegarlo a la izquierda */}
               </a>
             </div>
             {/* Primary Navbar items */}

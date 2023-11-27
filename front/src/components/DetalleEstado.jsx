@@ -17,7 +17,7 @@ const DetalleEstado = () => {
         setZonas(res.data)
     }
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 m-10">
+    <div className="grid grid-cols-2 m-5 md:grid-cols-3 gap-4 m-10">
       {zonas.map((zona) => (
         <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
              key={zona.idZona}>
