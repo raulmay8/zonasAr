@@ -1,5 +1,9 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+import Header from '../components/Header';
+>>>>>>> 2fce085827688a4c221bbd45b11bee1954fdc1b1
 
 import image1 from '../img/zona1.png';
 import image2 from '../img/zona2.png';
@@ -27,6 +31,10 @@ const Mejores = () => {
 
   return (
     <div className="tops-container">
+<<<<<<< HEAD
+=======
+      <Header />
+>>>>>>> 2fce085827688a4c221bbd45b11bee1954fdc1b1
       <div
         className="background-image bg-cover h-screen flex items-center justify-center relative"
         style={{ backgroundImage: `url(${imageData.src})` }}
@@ -42,4 +50,8 @@ const Mejores = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Mejores;
+=======
+export default Mejores;
+>>>>>>> 2fce085827688a4c221bbd45b11bee1954fdc1b1

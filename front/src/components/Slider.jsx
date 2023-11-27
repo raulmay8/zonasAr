@@ -69,4 +69,8 @@ const SimpleCarousel = () => {
   );
 };
 
+<<<<<<< HEAD
 export default SimpleCarousel;
+=======
+export default SimpleCarousel;
+>>>>>>> 2fce085827688a4c221bbd45b11bee1954fdc1b1
