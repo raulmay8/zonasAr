@@ -1,11 +1,9 @@
 import React from 'react';
-import Header from '../components/Header';
 import teamImage from '../img/nos.png';
 
 const Nosotros = () => {
   return (
     <>
-      <Header />
       <div className="relative bg-gray-100">
         {/* Full-width image with overlay */}
         <img

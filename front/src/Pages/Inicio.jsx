@@ -7,7 +7,6 @@ import Footer from '../components/Footer';
 const Inicio = () => {
   return (
     <div>
-      <Header />
       <div style={{ marginBottom: '20px' }}>
         <Slider />
       </div>

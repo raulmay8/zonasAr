@@ -28,7 +28,6 @@ const Mejores = () => {
 
   return (
     <div className="tops-container">
-      <Header />
       <div
         className="background-image bg-cover h-screen flex items-center justify-center relative"
         style={{ backgroundImage: `url(${imageData.src})` }}
