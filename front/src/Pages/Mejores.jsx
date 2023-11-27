@@ -1,6 +1,8 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from '../components/Header';
+/* import Map from '../components/Map'; */
+
 
 import image1 from '../img/zona1.png';
 import image2 from '../img/zona2.png';
@@ -40,6 +42,7 @@ const Mejores = () => {
           </div>
         </div>
       </div>
+      {/* <Map latitud={latitud} longitud={longitud} /> */}
     </div>
   );
 };
