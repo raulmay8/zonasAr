@@ -7,12 +7,12 @@ import Footer from '../components/Footer';
 const Inicio = () => {
   return (
     <div>
-      <Header/>
+      <Header />
       <div style={{ marginBottom: '20px' }}>
-        <Slider/>
+        <Slider />
       </div>
-      <Fondo/>
-      <Footer/>
+      <Fondo />
+      <Footer />
     </div>
   );
 }

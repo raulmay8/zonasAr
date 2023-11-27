@@ -1,5 +1,3 @@
-// Map.js
-
 import React, { useEffect } from 'react';
 
 const Map = ({ latitud, longitud }) => {

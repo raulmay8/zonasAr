@@ -1,17 +1,12 @@
+// Footer.jsx
+
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare, faTwitterSquare, faInstagramSquare } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
-  const estiloCafe = {
-    backgroundColor: '#4d2d1e',
-    color: 'white',
-    padding: '2rem',
-    textAlign: 'center',
-  };
-
   return (
-    <footer style={estiloCafe}>
+    <footer className="bg-gray-800 text-white p-4 text-center">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div>
@@ -27,16 +22,16 @@ const Footer = () => {
               <li><a href="/estado">Estados</a></li>
             </ul>
           </div>
-          <div className="flex flex-col items-center"> {/* Agregado para centrar los íconos */}
+          <div className="flex flex-col items-center">
             <h2 className="text-xl font-semibold mb-2">Síguenos</h2>
             <div className="flex space-x-2">
-              <a href="#" className="text-white hover:text-gray-300">
+              <a href="https://www.facebook.com/profile.php?id=61553636476647&mibextid=ZbWKwL" className="text-white hover:text-gray-300">
                 <FontAwesomeIcon icon={faFacebookSquare} size="2x" />
               </a>
-              <a href="#" className="text-white hover:text-gray-300">
+              <a href="https://twitter.com/?lang=es" className="text-white hover:text-gray-300">
                 <FontAwesomeIcon icon={faTwitterSquare} size="2x" />
               </a>
-              <a href="#" className="text-white hover:text-gray-300">
+              <a href="https://www.instagram.com/" className="text-white hover:text-gray-300">
                 <FontAwesomeIcon icon={faInstagramSquare} size="2x" />
               </a>
             </div>
