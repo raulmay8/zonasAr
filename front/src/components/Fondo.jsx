@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 
 const Fondo = () => {
   const backgroundImage = '../img/fondo.jpeg';
@@ -22,3 +22,4 @@ const Fondo = () => {
 };
 
 export default Fondo;
+ */

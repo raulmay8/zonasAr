@@ -1,6 +1,6 @@
+// Mejores.js
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import Header from '../components/Header';
 import Map from '../components/Map';
 
 import image1 from '../img/zona1.png';
@@ -17,14 +17,16 @@ const imageInfo = [
   { id: 5, src: image5, title: 'Ek Balam', description: 'Según una relación escrita en 1579 por Juan Gutiérrez Picón, Ek Balam era el nombre de un gran señor que fundó y gobernó un sitio durante 40 años, aunque no hay pruebas arqueológicas de su existencia. El glifo emblema de Ek Balam, encontrado en monumentos de piedra conocidos como Las Serpientes Jeroglíficas, confirma el nombre del sitio en la época clásica.', latitud: 20.6608, longitud: -88.2056 },
 ];
 
-
 const Mejores = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const id = searchParams.get('id');
 
-  const selectedId = id ? parseInt(id, 10) : 1;
+  const selectedId = parseInt(id, 10) || 1;
   const imageData = imageInfo.find(img => img.id === selectedId) || imageInfo[0];
+
+  const { title, description, latitud, longitud } = imageData;
+  const descriptionWithCoordinates = `${description}`;
 
   return (
     <div className="tops-container">
@@ -34,12 +36,14 @@ const Mejores = () => {
       >
         <div className="text-white text-center p-8">
           <div className="bg-black bg-opacity-50 rounded p-4">
-            <h1 className="text-4xl font-bold mb-4">{imageData.title}</h1>
-            <p className="text-lg mb-8 text-justify">{imageData.description}</p>
+            <h1 className="text-4xl font-bold mb-4">{title}</h1>
+            <p className="text-lg mb-4 text-justify">{descriptionWithCoordinates}</p>
+            <p className="text-lg mb-4">Latitud: {latitud}</p>
+            <p className="text-lg mb-8">Longitud: {longitud}</p>
           </div>
         </div>
       </div>
-      <Map latitud={imageData.latitud} longitud={imageData.longitud} /> 
+      {/* <Map latitud={latitud} longitud={longitud} /> */}
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Slider from '../components/Slider';
-import Fondo from '../components/Fondo';
+/* import Fondo from '../components/Fondo'; */
 import Footer from '../components/Footer';
 
 const Inicio = () => {
@@ -10,7 +10,7 @@ const Inicio = () => {
       <div style={{ marginBottom: '20px' }}>
         <Slider />
       </div>
-      <Fondo />
+     {/*  <Fondo /> */}
       <Footer />
     </div>
   );
